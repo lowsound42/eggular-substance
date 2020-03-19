@@ -8,7 +8,7 @@ function Main() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Testing Netlify build and deploy.
+          Future home of EGG prototype
         </p>
         <a
           className="App-link"
