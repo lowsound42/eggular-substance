@@ -45,12 +45,13 @@ function Main() {
   let month = d.getMonth();
   let hours = d.getHours();
   let minutes = d.getMinutes();
+  let ampm = hours >= 12 ? 'pm' : 'am';
 
   return (
     <>
     {load ? <div className={page ? `main` : `altmain`} onClick={() => setPage(false)}>
     <p className={page ? `main__date` : 'inviso'}>{months[month]} {day}</p>
-    <p className={page ? `main__time` : 'inviso'}>{hours}:{minutes}</p>
+    <p className={page ? `main__time` : 'inviso'}>{hours}:{minutes} {ampm}</p>
     <p className={page ? `main__words` : 'inviso'}>Start Slow</p>
     <p className={page ? 'inviso': 'altmain__morning'}>Good Morning</p>
     <div className={page ? 'inviso':'altmain__weather'}>
@@ -59,7 +60,7 @@ function Main() {
         <img className={page ? 'inviso':'altmain__weather-temp--img'} src={Sun}/>
         <div className={page ? 'inviso':'altmain__weather-temp--vals'}>
           <div className={page ? 'inviso': 'altmain__weather-temp--vals_1'}>{temp}C</div>
-          <div className={page ? 'inviso': 'altmain__weather-temp--vals_2'}>{cond }</div>
+          <div className={page ? 'inviso': 'altmain__weather-temp--vals_2'}>{cond}</div>
         </div>
       </div>
     </div>
