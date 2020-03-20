@@ -46,6 +46,9 @@ function Main() {
   let hours = d.getHours();
   let minutes = d.getMinutes();
   let ampm = hours >= 12 ? 'pm' : 'am';
+  if (hours > 12) {
+    hours = hours - 12;
+  }
 
   return (
     <>
