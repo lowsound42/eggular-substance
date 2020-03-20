@@ -2,6 +2,34 @@ html, body {
   margin: 0 auto;
   }
 
+.inviso{
+  display:none;
+}
+
+.altmain {
+  height: 100vh;
+  background-color: #FAC800;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+
+  &__morning{
+    margin-left: 3rem;
+  }
+
+  &__weather{
+    margin-left: 3rem;
+
+    &-temp{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
 .main {
   height: 100vh;
   background-color: #FAA600;
@@ -27,6 +55,5 @@ html, body {
   &__words{
     margin-left: 3rem;
     text-decoration: none;
-
   }
 }
