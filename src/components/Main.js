@@ -13,7 +13,9 @@ function Main() {
     res.json()
       .then(res => {
         console.log(res);
-        setTemp(res.currently.temperature);
+        let ftoc = Math.round((res.currently.temperature - 32) * 5 / 9);
+        console.log(ftoc);   
+        setTemp(ftoc);
         setCond(res.currently.summary);
       })
       .catch(() => console.log('error!!'))
@@ -56,7 +58,7 @@ function Main() {
       <div className={page ? 'inviso':'altmain__weather-temp'}>
         <img className={page ? 'inviso':'altmain__weather-temp--img'} src={Sun}/>
         <div className={page ? 'inviso':'altmain__weather-temp--vals'}>
-          <div className={page ? 'inviso': 'altmain__weather-temp--vals_1'}>{temp}</div>
+          <div className={page ? 'inviso': 'altmain__weather-temp--vals_1'}>{temp}C</div>
           <div className={page ? 'inviso': 'altmain__weather-temp--vals_2'}>{cond }</div>
         </div>
       </div>
