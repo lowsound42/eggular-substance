@@ -50,6 +50,10 @@ function Main() {
     hours = hours - 12;
   }
 
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
   return (
     <>
     {load ? <div className={page ? `main` : `altmain`} onClick={() => setPage(false)}>
